@@ -6,3 +6,28 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images
+  ExpiresByType image/jpeg "access plus 1 minute"
+  ExpiresByType image/gif "access plus 1 minute"
+  ExpiresByType image/png "access plus 1 minute"
+  ExpiresByType image/webp "access plus 1 minute"
+  ExpiresByType image/svg+xml "access plus 1 minute"
+  ExpiresByType image/x-icon "access plus 1 minute"
+
+  # Video
+  ExpiresByType video/mp4 "access plus 1 minute"
+  ExpiresByType video/mpeg "access plus 1 minute"
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 minute"
+  ExpiresByType text/javascript "access plus 1 minute"
+  ExpiresByType application/javascript "access plus 1 minute"
+
+  # Others
+  ExpiresByType application/pdf "access plus 1 minute"
+  ExpiresByType application/x-shockwave-flash "access plus 1 minute"
+</IfModule>
