@@ -5,13 +5,31 @@
         ><span class="logo-text">Oliver Pietsch</span></router-link
       >
       <div id="nav">
-        <router-link class="link" to="/">Home</router-link> |
-        <router-link class="link" to="/about">About</router-link>
+        <router-link
+          class="link"
+          :key="route.name"
+          v-for="route in routes"
+          :to="route.path"
+        >
+          {{ route.name }}
+        </router-link>
       </div>
     </header>
     <router-view class="content" />
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+
+@Component
+export default class App extends Vue {
+  get routes() {
+    // @ts-ignore
+    return this.$router.options.routes;
+  }
+}
+</script>
 
 <style>
 #app {
