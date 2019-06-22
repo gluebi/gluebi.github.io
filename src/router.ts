@@ -20,7 +20,7 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Referenzen.vue")
+        import(/* webpackChunkName: "about" */ "@/views/Referenzen.vue")
     },
     {
       path: "/impressum",
@@ -29,12 +29,12 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Impressum.vue")
+        import(/* webpackChunkName: "about" */ "@/views/Impressum.vue")
     },
     {
       path: "*",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/NotFoundComponent.vue")
+        import(/* webpackChunkName: "about" */ "@/views/NotFoundComponent.vue")
     }
   ]
 });

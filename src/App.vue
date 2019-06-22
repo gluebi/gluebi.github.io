@@ -11,8 +11,8 @@
           v-for="route in routes"
           :to="route.path"
         >
-          {{ route.name }}
-        </router-link>
+          {{ route.name }}</router-link
+        >
       </div>
     </header>
     <router-view class="content" />
