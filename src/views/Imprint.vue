@@ -19,7 +19,7 @@ import TextComponent from "@/components/TextComponent.vue";
   }
 })
 export default class Impressum extends Vue {
-  textComponentHeadline: string = "Imprint.vue";
+  textComponentHeadline: string = "Imprint";
 
   textComponentItem: Array<string> = [
     "Oliver Pietsch<br> Müllerstr. 142<br> 13353&nbsp;Berlin<br> Mail: kontakt @ oliver-pietsch.de"

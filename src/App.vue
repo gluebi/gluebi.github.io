@@ -33,7 +33,7 @@ export default class App extends Vue {
 }
 </script>
 
-<style>
+<style lang="css">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -45,12 +45,17 @@ export default class App extends Vue {
 header {
   align-items: center;
   display: flex;
+  justify-content: space-between;
   padding: 60px 0;
+}
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
 }
 .logo {
   color: #2c3e50;
   display: block;
-  flex-basis: 30%;
   text-decoration: none;
 }
 .logo-text {
@@ -59,7 +64,6 @@ header {
   text-transform: uppercase;
 }
 #nav {
-  flex-basis: 60%;
   text-align: right;
 }
 #nav a {
