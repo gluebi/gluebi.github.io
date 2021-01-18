@@ -6,7 +6,7 @@ const routes: Array<Route> = [
   {
     path: "/",
     name: "About me",
-    component: import("@/views/Home.vue"),
+    component: () => import("@/views/Home.vue"),
     visible: true
   },
   {
