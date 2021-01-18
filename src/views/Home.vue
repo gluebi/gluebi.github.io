@@ -21,10 +21,10 @@ export default class Home extends Vue {
   textComponentHeadline: string = "Frontend Developer & Mediengestalter";
 
   textComponentContent: Array<string> = [
-    "Hallo, ich bin Oliver.",
-    'Ich gestalte und entwickle Websites mit <a href="https://vuejs.org/" title="Vue.js" target="_blank" rel="noopener">Vue.js</a>',
-    'Zur Zeit arbeite ich bei <a href="https://www.publicispixelpark.de/" title="Publicis Pixelpark" target="_blank" rel="noopener">Publicis Pixelpark</a>.',
-    'Du kannst mich <a href="mailto:kontakt@oliver-pietsch.de">hier</a> (<a href="https://oliver-pietsch.de/kontakt_at_oliver-pietsch.de_public_key.asc" download rel="noopener" >PGP Key</a>) kontaktieren.'
+    "Hello, I am Oliver.",
+    'I design and build SPAs with <a href="https://vuejs.org/" title="Vue.js" target="_blank" rel="noopener">Vue.js</a>',
+    'Currently I am employed at <a href="https://www.customer-alliance.com/" title="Customer Alliance" target="_blank" rel="noopener">CA Customer Alliance GmbH</a>.',
+    'You can contant me <a href="mailto:kontakt@oliver-pietsch.de">here</a> (<a href="https://oliver-pietsch.de/kontakt_at_oliver-pietsch.de_public_key.asc" download rel="noopener" >PGP Key</a>).'
   ];
 }
 </script>
