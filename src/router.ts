@@ -1,32 +1,47 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
-import Home from "./views/Home.vue";
 
-const routes: Array<RouteRecordRaw> = [
+type Route = RouteRecordRaw & { visible: boolean };
+
+const routes: Array<Route> = [
   {
     path: "/",
-    name: "Über mich",
-    component: Home
+    name: "About me",
+    component: import("@/views/Home.vue"),
+    visible: true
+  },
+  {
+    path: "/references",
+    name: "References",
+    visible: true,
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "@/views/References.vue")
   },
   {
     path: "/referenzen",
-    name: "Referenzen",
+    redirect: { name: "References" },
+    visible: false
+  },
+  {
+    path: "/imprint",
+    name: "Imprint",
+    visible: true,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/Referenzen.vue")
+      import(/* webpackChunkName: "about" */ "@/views/Imprint.vue")
   },
   {
     path: "/impressum",
-    name: "Impressum",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/Impressum.vue")
+    redirect: { name: "Imprint" },
+    visible: false
   },
   {
     path: "/:catchAll(.*)",
+    visible: false,
     component: () =>
       import(/* webpackChunkName: "about" */ "@/views/NotFoundComponent.vue")
   }

@@ -13,13 +13,13 @@ import { Options, Vue } from "vue-class-component";
 import ListComponent from "@/components/ListComponent.vue";
 
 @Options({
-  name: "Referenzen",
+  name: "References",
   components: {
     ListComponent
   }
 })
 export default class Referenzen extends Vue {
-  listComponentHeadline: string = "Referenzen";
+  listComponentHeadline: string = "References.vue";
 
   listComponentItem: Array<string> = [
     'Senior Frontend Developer at <a href="https://www.customer-alliance.com/" title="Customer Alliance" target="_blank" rel="noopener">CA Customer Alliance GmbH</a>',

@@ -13,13 +13,13 @@ import { Options, Vue } from "vue-class-component";
 import TextComponent from "@/components/TextComponent.vue";
 
 @Options({
-  name: "Impressum",
+  name: "Imprint",
   components: {
     TextComponent
   }
 })
 export default class Impressum extends Vue {
-  textComponentHeadline: string = "Impressum";
+  textComponentHeadline: string = "Imprint.vue";
 
   textComponentItem: Array<string> = [
     "Oliver Pietsch<br> Müllerstr. 142<br> 13353&nbsp;Berlin<br> Mail: kontakt @ oliver-pietsch.de"
