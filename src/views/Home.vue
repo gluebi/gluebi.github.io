@@ -8,10 +8,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 import TextComponent from "@/components/TextComponent.vue"; // @ is an alias to /src
 
-@Component({
+@Options({
+  name: "Home",
   components: {
     TextComponent
   }

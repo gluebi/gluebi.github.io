@@ -1,40 +1,40 @@
-import Vue from "vue";
-import Router from "vue-router";
+import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
 import Home from "./views/Home.vue";
 
-Vue.use(Router);
+const routes: Array<RouteRecordRaw> = [
+  {
+    path: "/",
+    name: "Über mich",
+    component: Home
+  },
+  {
+    path: "/referenzen",
+    name: "Referenzen",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "@/views/Referenzen.vue")
+  },
+  {
+    path: "/impressum",
+    name: "Impressum",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "@/views/Impressum.vue")
+  },
+  {
+    path: "/:catchAll(.*)",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "@/views/NotFoundComponent.vue")
+  }
+];
 
-export default new Router({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: "/",
-      name: "Über mich",
-      component: Home
-    },
-    {
-      path: "/referenzen",
-      name: "Referenzen",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "@/views/Referenzen.vue")
-    },
-    {
-      path: "/impressum",
-      name: "Impressum",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "@/views/Impressum.vue")
-    },
-    {
-      path: "*",
-      component: () =>
-        import(/* webpackChunkName: "about" */ "@/views/NotFoundComponent.vue")
-    }
-  ]
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
 });
+
+export default router;

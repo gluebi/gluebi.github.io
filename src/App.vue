@@ -20,9 +20,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 
-@Component
+@Options({
+  name: "App"
+})
 export default class App extends Vue {
   get routes() {
     // @ts-ignore

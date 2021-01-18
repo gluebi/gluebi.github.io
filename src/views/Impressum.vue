@@ -9,10 +9,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 import TextComponent from "@/components/TextComponent.vue";
 
-@Component({
+@Options({
+  name: "Impressum",
   components: {
     TextComponent
   }

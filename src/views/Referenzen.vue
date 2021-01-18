@@ -9,10 +9,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 import ListComponent from "@/components/ListComponent.vue";
 
-@Component({
+@Options({
+  name: "Referenzen",
   components: {
     ListComponent
   }

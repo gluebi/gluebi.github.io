@@ -8,15 +8,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 
-@Component({
+class Props {
+  headline?: string;
+  content!: Array<string>;
+}
+
+@Options<TextComponent>({
   name: "TextComponent"
 })
-export default class TextComponent extends Vue {
-  @Prop() headline?: string;
-  @Prop() content!: Array<string>;
-}
+export default class TextComponent extends Vue.with(Props) {}
 </script>
 
 <style scoped>
