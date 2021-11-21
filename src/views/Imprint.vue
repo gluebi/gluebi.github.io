@@ -6,10 +6,10 @@
 
 <script setup lang="ts">
 import TextComponent from "../components/TextComponent.vue";
-import { Store, useStore } from "vuex";
-import { key, State } from "../store";
+import { Store } from "vuex";
+import { key, State, useStore } from "../store";
 
-const store: Store<State> = useStore(key);
+const store: Store<State> = useStore();
 const headline = store.state.imprintHeadline;
 const paragraphs = store.state.imprintParagraphs;
 </script>

@@ -6,10 +6,10 @@
 
 <script setup lang="ts">
 import ListComponent from "../components/ListComponent.vue";
-import { Store, useStore } from "vuex";
-import { key, State } from "../store";
+import { Store } from "vuex";
+import { key, State, useStore } from "../store";
 
-const store: Store<State> = useStore(key);
+const store: Store<State> = useStore();
 const headline = store.state.referencesHeadline;
 const paragraphs = store.state.references;
 </script>

@@ -1,5 +1,5 @@
 import { InjectionKey } from "vue";
-import { createStore, Store } from "vuex";
+import { createStore, useStore as baseUseStore, Store } from "vuex";
 
 export interface State {
   homeHeadline: string;
@@ -43,3 +43,7 @@ export const store = createStore<State>({
     notFoundParagraphs: ["Sorry, the page you are looking for does not exit."],
   },
 });
+
+export function useStore() {
+  return baseUseStore(key);
+}
