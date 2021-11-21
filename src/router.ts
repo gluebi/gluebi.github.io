@@ -20,11 +20,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       visible: true,
     },
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/References.vue"),
+    component: () => import("@/views/References.vue"),
   },
   {
     path: "/referenzen",
@@ -39,11 +35,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       visible: true,
     },
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/Imprint.vue"),
+    component: () => import("@/views/Imprint.vue"),
   },
   {
     path: "/impressum",
@@ -57,13 +49,12 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       visible: false,
     },
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/NotFoundComponent.vue"),
+    component: () => import("@/views/NotFoundComponent.vue"),
   },
 ];
 
 const router: Router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
 
