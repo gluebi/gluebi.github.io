@@ -13,7 +13,6 @@
     "@vue/babel-preset-app": "^4.5.15",
     "core-js": "^3.19.1",
     "vue": "^3.2.22",
-    "vue-class-component": "^8.0.0-rc.1",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },

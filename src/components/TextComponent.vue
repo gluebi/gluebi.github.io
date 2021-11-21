@@ -7,18 +7,11 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-
-class Props {
-  headline?: string;
-  content!: Array<string>;
-}
-
-@Options<TextComponent>({
-  name: "TextComponent",
-})
-export default class TextComponent extends Vue.with(Props) {}
+<script setup lang="ts">
+const props = defineProps<{
+  headline: string;
+  content: Array<string>;
+}>();
 </script>
 
 <style scoped>

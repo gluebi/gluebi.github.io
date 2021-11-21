@@ -9,18 +9,11 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-
-class Props {
-  headline?: string;
-  content!: Array<string>;
-}
-
-@Options<ListComponent>({
-  name: "ListComponent",
-})
-export default class ListComponent extends Vue.with(Props) {}
+<script setup lang="ts">
+const props = defineProps<{
+  headline: string;
+  content: Array<string>;
+}>();
 </script>
 
 <style scoped>

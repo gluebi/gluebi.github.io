@@ -20,17 +20,20 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { RouteRecordRaw, useRouter } from "vue-router";
+import { computed } from "vue";
 
-@Options({
-  name: "App",
-})
-export default class App extends Vue {
-  get routes() {
-    // @ts-ignore
-    return this.$router.options.routes.filter((route) => route.visible);
-  }
-}
+export default {
+  setup() {
+    const router = useRouter();
+    const routes = computed<RouteRecordRaw[]>((): RouteRecordRaw[] =>
+      router.getRoutes().filter((route: RouteRecordRaw) => route.meta?.visible)
+    );
+    return {
+      routes,
+    };
+  },
+};
 </script>
 
 <style lang="css">
