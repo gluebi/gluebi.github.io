@@ -9,7 +9,7 @@
 import { Options, Vue } from "vue-class-component";
 
 @Options({
-  name: "Not Found"
+  name: "Not Found",
 })
 export default class NotFoundComponent extends Vue {}
 </script>

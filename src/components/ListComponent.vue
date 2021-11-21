@@ -18,7 +18,7 @@ class Props {
 }
 
 @Options<ListComponent>({
-  name: "ListComponent"
+  name: "ListComponent",
 })
 export default class ListComponent extends Vue.with(Props) {}
 </script>

@@ -15,8 +15,8 @@ import ListComponent from "@/components/ListComponent.vue";
 @Options({
   name: "References",
   components: {
-    ListComponent
-  }
+    ListComponent,
+  },
 })
 export default class Referenzen extends Vue {
   listComponentHeadline: string = "References.vue";
@@ -30,7 +30,7 @@ export default class Referenzen extends Vue {
     "Technology Assistant at Stanford University in Berlin (Bing Overseas Studies Program)",
     'Freelance work at <a href="https://www.blitzrechner.de" title="Blitzrechner" target="_blank" rel="noopener">www.blitzrechner.de</a> and <a href="https://www.blitzresults.com" title="Blitzresults" target="_blank" rel="noopener">www.blitzresults.com</a> as developer',
     'Ausbildung zum Mediengestalter bei <a href="http://www.laborfuergestaltung.de" title="Labor für Gestaltung" target="_blank" rel="noopener">Labor für Gestaltung Schleßelmann GmbH</a>',
-    'Technische Umsetzung der Website <a href="http://http://www.laborfuergestaltung.de" title="Labor für Gestaltung" target="_blank" rel="noopener">www.laborfuergestaltung.de</a>'
+    'Technische Umsetzung der Website <a href="http://http://www.laborfuergestaltung.de" title="Labor für Gestaltung" target="_blank" rel="noopener">www.laborfuergestaltung.de</a>',
   ];
 }
 </script>

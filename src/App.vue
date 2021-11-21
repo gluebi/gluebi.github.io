@@ -23,12 +23,12 @@
 import { Options, Vue } from "vue-class-component";
 
 @Options({
-  name: "App"
+  name: "App",
 })
 export default class App extends Vue {
   get routes() {
     // @ts-ignore
-    return this.$router.options.routes.filter(route => route.visible);
+    return this.$router.options.routes.filter((route) => route.visible);
   }
 }
 </script>

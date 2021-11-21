@@ -16,7 +16,7 @@ class Props {
 }
 
 @Options<TextComponent>({
-  name: "TextComponent"
+  name: "TextComponent",
 })
 export default class TextComponent extends Vue.with(Props) {}
 </script>
