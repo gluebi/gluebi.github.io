@@ -19,7 +19,7 @@ import ListComponent from "@/components/ListComponent.vue";
   },
 })
 export default class Referenzen extends Vue {
-  listComponentHeadline: string = "References.vue";
+  listComponentHeadline: string = "References";
 
   listComponentItem: Array<string> = [
     'Senior Frontend Developer at <a href="https://www.customer-alliance.com/" title="Customer Alliance" target="_blank" rel="noopener">CA Customer Alliance GmbH</a>',
