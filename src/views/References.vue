@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import ListComponent from "@/components/ListComponent.vue";
+import ListComponent from "../components/ListComponent.vue";
 import { Store, useStore } from "vuex";
 import { key, State } from "../store";
 

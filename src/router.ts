@@ -9,7 +9,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "About me",
-    component: () => import("@/views/Home.vue"),
+    component: () => import("./views/Home.vue"),
     meta: {
       visible: true,
     },
@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       visible: true,
     },
-    component: () => import("@/views/References.vue"),
+    component: () => import("./views/References.vue"),
   },
   {
     path: "/referenzen",
@@ -35,7 +35,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       visible: true,
     },
-    component: () => import("@/views/Imprint.vue"),
+    component: () => import("./views/Imprint.vue"),
   },
   {
     path: "/impressum",
@@ -49,7 +49,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       visible: false,
     },
-    component: () => import("@/views/NotFoundComponent.vue"),
+    component: () => import("./views/NotFoundComponent.vue"),
   },
 ];
 
