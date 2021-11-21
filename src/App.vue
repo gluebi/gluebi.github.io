@@ -1,22 +1,20 @@
 <template>
-  <div id="app">
-    <header>
-      <router-link class="logo" to="/">
-        <span class="logo-text">Oliver Pietsch</span>
+  <header>
+    <router-link class="logo" to="/">
+      <span class="logo-text">Oliver Pietsch</span>
+    </router-link>
+    <nav id="nav">
+      <router-link
+        class="link"
+        :key="route.name"
+        v-for="route in routes"
+        :to="route.path"
+      >
+        {{ route.name }}
       </router-link>
-      <div id="nav">
-        <router-link
-          class="link"
-          :key="route.name"
-          v-for="route in routes"
-          :to="route.path"
-        >
-          {{ route.name }}
-        </router-link>
-      </div>
-    </header>
-    <router-view class="content" />
-  </div>
+    </nav>
+  </header>
+  <router-view class="content" />
 </template>
 
 <script lang="ts">

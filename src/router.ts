@@ -1,6 +1,9 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
-
-type Route = RouteRecordRaw & { visible: boolean };
+import {
+  RouteRecordRaw,
+  createRouter,
+  createWebHistory,
+  Router,
+} from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -59,7 +62,7 @@ const routes: Array<RouteRecordRaw> = [
   },
 ];
 
-const router = createRouter({
+const router: Router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
