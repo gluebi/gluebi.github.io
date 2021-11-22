@@ -1,1 +1,0 @@
-import{T as a}from"./TextComponent.731451e7.js";import{u as s}from"./index.08df210a.js";import{m as r,o as c,a as m,d as p,n as o}from"./vendor.6899a86b.js";const d={class:"home"},x=r({setup(i){const e=s(),t=e.state.homeHeadline,n=e.state.homeParagraphs;return(l,h)=>(c(),m("div",d,[p(a,{headline:o(t),content:o(n)},null,8,["headline","content"])]))}});export{x as default};
