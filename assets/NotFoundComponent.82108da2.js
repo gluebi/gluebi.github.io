@@ -1,1 +1,0 @@
-import{T as a}from"./TextComponent.731451e7.js";import{u as s}from"./index.08df210a.js";import{m as r,o as c,a as d,d as p,n}from"./vendor.6899a86b.js";const i={class:"not-found"},x=r({setup(m){const e=s(),o=e.state.notFoundHeadline,t=e.state.notFoundParagraphs;return(l,u)=>(c(),d("div",i,[p(a,{headline:n(o),content:n(t)},null,8,["headline","content"])]))}});export{x as default};
