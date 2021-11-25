@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: '16'
         cache: 'npm'
-    - run: npm ci
+    - run: npm ci --verbose
     - run: npm run build
     
     - name: Deploy to GH Pages 🚀
