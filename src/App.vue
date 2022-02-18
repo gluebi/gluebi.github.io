@@ -17,21 +17,16 @@
   <router-view class="content" />
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { RouteRecordRaw, useRouter } from "vue-router";
-import { computed } from "vue";
+import { computed, ComputedRef } from "vue";
 
-export default {
-  setup() {
-    const router = useRouter();
-    const routes = computed<RouteRecordRaw[]>((): RouteRecordRaw[] =>
-      router.getRoutes().filter((route: RouteRecordRaw) => route.meta?.visible)
-    );
-    return {
-      routes,
-    };
-  },
-};
+const router = useRouter();
+const routes: ComputedRef<Array<RouteRecordRaw> | undefined> = computed<
+  RouteRecordRaw[]
+>((): RouteRecordRaw[] =>
+  router.getRoutes().filter((route: RouteRecordRaw) => route.meta?.visible)
+);
 </script>
 
 <style lang="css">
