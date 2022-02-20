@@ -21,7 +21,9 @@ jobs:
       with:
         node-version: '17'
         cache: 'npm'
-    - run: yarn install
+    - uses: borales/actions-yarn@v2.3.0
+      with:
+        cmd: install # will run `yarn install` command
     - run: npm run test
     - run: npm run build
 
