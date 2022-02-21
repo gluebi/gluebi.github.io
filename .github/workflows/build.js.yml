@@ -15,21 +15,25 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 17
-      uses: actions/setup-node@v2
-      with:
-        node-version: '17'
-        cache: 'yarn'
-    - uses: borales/actions-yarn@v2.3.0
-      with:
-        cmd: install
-    - uses: borales/actions-yarn@v2.3.0
-      with:
-        cmd: test
-    - uses: borales/actions-yarn@v2.3.0
-      with:
-        cmd: build
+#    - uses: actions/checkout@v2
+#    - name: Use Node.js 17
+#      uses: actions/setup-node@v2
+#      with:
+#        node-version: '17'
+#        cache: 'yarn'
+#    - uses: borales/actions-yarn@v2.3.0
+#      with:
+#        cmd: install
+#    - uses: borales/actions-yarn@v2.3.0
+#      with:
+#        cmd: test
+#    - uses: borales/actions-yarn@v2.3.0
+#      with:
+#        cmd: build
+
+    - name: Test
+      run: |
+        which git
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.2.5
