@@ -16,7 +16,8 @@ yarn build
 ```
 
 ### Run your tests
-```yarn test
+```
+yarn test
 ```
 
 ### Lints and fixes files
