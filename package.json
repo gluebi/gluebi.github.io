@@ -25,7 +25,7 @@
     "@vue/test-utils": "^2.0.1",
     "autoprefixer": "^10.4.7",
     "eslint": "^8.18.0",
-    "eslint-plugin-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^8.7.1",
     "esbuild": "^0.14.47",
     "jest": "^27.5.1",
