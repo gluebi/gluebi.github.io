@@ -37,7 +37,7 @@ jobs:
         which git
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4.3.4
+      uses: JamesIves/github-pages-deploy-action@v4.4.0
       with:
         branch: deploy # The branch the action should deploy to.
         folder: dist # The folder the action should deploy.
