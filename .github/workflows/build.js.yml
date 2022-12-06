@@ -21,13 +21,13 @@ jobs:
       with:
         node-version: '17'
         cache: 'yarn'
-    - uses: borales/actions-yarn@v3.0.0
+    - uses: borales/actions-yarn@v4.2.0
       with:
         cmd: install
-    - uses: borales/actions-yarn@v3.0.0
+    - uses: borales/actions-yarn@v4.2.0
       with:
         cmd: test
-    - uses: borales/actions-yarn@v3.0.0
+    - uses: borales/actions-yarn@v4.2.0
       with:
         cmd: build
     - uses: actions/checkout@v3
