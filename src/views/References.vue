@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import ListComponent from "../components/ListComponent.vue";
 import { Store } from "vuex";
-import { key, State, useStore } from "../store";
+import { State, useStore } from "../store";
 
 const store: Store<State> = useStore();
 const headline = store.state.referencesHeadline;
