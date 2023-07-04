@@ -19,7 +19,7 @@ jobs:
     - name: Use Node.js 17
       uses: actions/setup-node@v3
       with:
-        node-version: '17'
+        node-version: '18'
         cache: 'yarn'
     - uses: borales/actions-yarn@v4.2.0
       with:
@@ -30,11 +30,6 @@ jobs:
     - uses: borales/actions-yarn@v4.2.0
       with:
         cmd: build
-    - uses: actions/checkout@v3
-
-    - name: Test
-      run: |
-        which git
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.4.2
