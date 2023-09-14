@@ -74,6 +74,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
       - name: Show files
         run: ls -la
+      - name: Cat README.md
+        run: cat README.md
       - name: Compress artifact
         run: tar -czvf artifact.tar.gz output/public
       - name: Upload artifact
