@@ -63,7 +63,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            output
+            .output
             .nuxt
           key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
           restore-keys: |
@@ -73,11 +73,11 @@ jobs:
       - name: Static HTML export with Nuxt
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
       - name: Show files
-        run: ls -la ./output
+        run: ls -la ./.output
       - name: Cat README.md
         run: cat README.md
       - name: Compress artifact
-        run: tar -czvf artifact.tar.gz output/public
+        run: tar -czvf artifact.tar.gz ./.output/public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
