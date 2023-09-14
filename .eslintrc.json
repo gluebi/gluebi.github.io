@@ -1,0 +1,108 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "defineEmits": "readonly",
+    "defineProps": "readonly",
+    "withDefaults": "readonly",
+    "computed": "readonly",
+    "reactive": "readonly",
+    "ref": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "parser": "@typescript-eslint/parser",
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".vue"]
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:nuxt/recommended",
+    "plugin:vue/vue3-recommended"
+  ],
+  "ignorePatterns": [
+    "dist/*",
+    ".nuxt/*",
+    ".output",
+    "android/*",
+    "ios/*"
+  ],
+  // add your custom rules here
+  "rules": {
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
+    "no-debugger": "warn",
+    "no-extra-semi": "error",
+    "no-console": "off",
+    "no-else-return": "error",
+    "no-param-reassign": "error",
+    "arrow-body-style": ["error", "as-needed"],
+    "template-curly-spacing": ["error"],
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": {
+        "max": 1
+      },
+      "multiline": {
+        "max": 1
+      }
+    }],
+    "vue/first-attribute-linebreak": ["error", {
+      "singleline": "below",
+      "multiline": "below"
+    }],
+    "vue/no-v-html": "off",
+    "vue/script-setup-uses-vars": "error",
+    "vue/multi-word-component-names": "off",
+    "vue/require-default-prop": "off",
+    "vue/v-on-event-hyphenation": ["error", "always", {
+      "autofix": true
+    }],
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/array-type": ["error", {
+      "default": "generic",
+      "readonly": "generic"
+    }],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-extra-semi": "error",
+    "@typescript-eslint/comma-dangle": ["error"],
+    "@typescript-eslint/consistent-type-imports": ["error", {
+      "prefer": "type-imports",
+      "disallowTypeAnnotations": false
+    }],
+    "@typescript-eslint/dot-notation": ["error"],
+    "@typescript-eslint/quotes": ["error", "single"],
+    "@typescript-eslint/naming-convention": ["error", {
+      "format": ["camelCase"],
+      "selector": "variable"
+    },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      }
+    ],
+    "@typescript-eslint/no-confusing-void-expression": ["error"],
+    "@typescript-eslint/no-floating-promises": ["error"],
+    "@typescript-eslint/no-misused-promises": ["error"],
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-this-alias": ["error"],
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": ["error"],
+    "@typescript-eslint/no-unnecessary-condition": ["off"],
+    "@typescript-eslint/object-curly-spacing": ["error", "always"],
+    "@typescript-eslint/prefer-includes": ["error"],
+    "@typescript-eslint/prefer-nullish-coalescing": ["error"],
+    "@typescript-eslint/prefer-optional-chain": ["error"],
+    "@typescript-eslint/prefer-string-starts-ends-with": ["error"],
+    "@typescript-eslint/promise-function-async": ["error"],
+    "@typescript-eslint/require-await": ["error"],
+    "@typescript-eslint/return-await": ["error"],
+    "@typescript-eslint/space-before-blocks": ["error"],
+    "@typescript-eslint/space-before-function-paren": ["error"],
+    "@typescript-eslint/type-annotation-spacing": ["error"]
+  }
+}
