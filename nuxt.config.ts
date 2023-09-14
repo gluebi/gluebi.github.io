@@ -24,5 +24,11 @@ export default defineNuxtConfig({
   
   devServer: {
     port: 3033
-  }
+  },
+
+  generate:{
+    nojekyll: true, //not working on this version
+  },
+  ssr: true, //server side rendered enabled //When true
+  target: "static", // and static, nuxt generates a hybrid static site
 })
